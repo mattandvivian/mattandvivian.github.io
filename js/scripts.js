@@ -200,7 +200,7 @@ $(document).ready(function () {
             address: 'Hay Bay, Greater Napanee, Ontario',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues contact Vivian at +91 9435021804 or +91 7086018971."
+            description: "We can't wait to see you on our big day. For any queries or issues contact Vivian or Matt."
         }
     });
 
@@ -214,8 +214,8 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== '6f8d9dcb3fb4300b0e08e8c8b2dad587'
-            && MD5($('#invite_code').val()) !== '0addb36cc6aee501a9035f588dbc8f12') {
+        if (MD5($('#invite_code').val()) !== 'b61d0d850580b09167e4fb917584827b'
+            && MD5($('#invite_code').val()) !== '21f73e624d0b8216697fbba8293abe97') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbxA-Yn7bGoqB5KZk4Quw9flAbr456wX3NRHUogs/exec', data)
@@ -237,7 +237,7 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var itc_kol = {lat: 44.144429, lng: 77.003700};
+    var itc_kol = {lat: 44.249472, lng: -76.950173};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: itc_kol,
@@ -251,7 +251,7 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 44.144429, lng: 77.003700};
+    var la_fiesta = {lat: 44.249472, lng: -76.950173};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,
