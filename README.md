@@ -1,11 +1,11 @@
-### Wedding website
+## Wedding website
 Hello, this is Vivian. I am NOT a programmer. However, i had picked up some
 programming skills over the years, mostly Python, R and Matlab. This is my first
 website<sup>[1](#footnote1)</sup>, so please be gentle.
 
-#### Documentation (to be updated...)
+### Documentation (to be updated...)
 
-#### Acknowledgements
+### Acknowledgements
 * Website forked from [rampatra/wedding-website](https://github.com/rampatra/wedding-website).
 _See [wedding.rampatra.com](http://wedding.rampatra.com/) for a demo._
 
