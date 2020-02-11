@@ -162,14 +162,14 @@ $(document).ready(function () {
             title: "Matt and Vivian's Ontario Reception",
 
             // Event start date
-            start: new Date('Aug 15, 2020 11:00'),
+            start: new Date('Aug 22, 2020 13:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Aug 15, 2020 15:00'),
+            end: new Date('Aug 22, 2020 23:00'),
 
             // Event Address
             address: 'Hay Bay, Greater Napanee, Ontario',
@@ -194,15 +194,19 @@ $(document).ready(function () {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbxA-Yn7bGoqB5KZk4Quw9flAbr456wX3NRHUogs/exec', data)
-                .done(function (data) {
-                    console.log(data);
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $('#alert-wrapper').html(alert_markup('danger', data.message));
+                } else {
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');
-                })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-                });
+                }
+            })
+            .fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            });
         }
     });
 
@@ -212,15 +216,15 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var itc_kol = {lat: 44.249472, lng: -76.950173};
+    var location = {lat: 44.249472, lng: -76.950173};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
-        center: itc_kol,
+        center: location,
         scrollwheel: false
     });
 
     var marker = new google.maps.Marker({
-        position: itc_kol,
+        position: location,
         map: map
     });
 }
