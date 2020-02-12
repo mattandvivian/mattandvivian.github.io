@@ -274,7 +274,7 @@
     }
 
     footer ul.footer-group li a {
-        font-size: 13px;
+        font-size: 10px; /*13px*/
         text-transform: uppercase;
         padding: 20px 0;
         display: block;
@@ -297,7 +297,7 @@
     }
 
     .hero .hero-content img {
-        width: 30%; /*65%*/
+        width: 65%;
     }
 
     .hero .btn {
