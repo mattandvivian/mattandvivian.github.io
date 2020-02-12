@@ -292,6 +292,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    .hero {
+      background: url("../img/hero-mobile.jpg") center center;
+    }
+    
     .hero .hero-content {
         padding-top: 110%;
     }
@@ -353,7 +357,7 @@
         display: none;
     }
 
-    #footer {
+    footer {
         font-size: 3px;
     }
 
