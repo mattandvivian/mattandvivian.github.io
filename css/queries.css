@@ -293,8 +293,8 @@
 
 @media screen and (max-width: 480px) {
     .hero {
-        /*background: url("../img/hero-mobile.jpg" center center);*/
-        background-position: 50% 50%;
+        background: url("../img/hero-mobile.jpg" no-repeat center center);
+        background-size: 40%;
     }
 
     .hero .hero-content {
