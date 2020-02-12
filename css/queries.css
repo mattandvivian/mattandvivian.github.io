@@ -295,6 +295,7 @@
     .hero {
         background: url("../img/hero-mobile.jpg" center center);
         background-position: 65% center;
+        height: 80%;
     }
 
     .hero .hero-content {
