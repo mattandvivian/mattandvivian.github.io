@@ -293,9 +293,9 @@
 
 @media screen and (max-width: 480px) {
     .hero {
-        background: url("../img/hero-mobile.jpg") center center;
+        background: url("../img/hero-mobile.jpg");
     }
-    
+
     .hero .hero-content {
         padding-top: 110%;
     }
