@@ -274,7 +274,7 @@
     }
 
     footer ul.footer-group li a {
-        font-size: 10px; /*13px*/
+        font-size: 13px;
         text-transform: uppercase;
         padding: 20px 0;
         display: block;
@@ -351,6 +351,10 @@
 
     .down-arrow {
         display: none;
+    }
+
+    footer ul.footer-group {
+        font-size: 3px;
     }
 
 }
