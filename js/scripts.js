@@ -252,7 +252,7 @@ function initMap() {
     var end = new google.maps.LatLng(44.104587, -77.061417);
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-      zoom: 17,
+      zoom: 15,
       center: start
     });
 
@@ -269,6 +269,7 @@ function initMap() {
       directionsRenderer.setDirections(result);
     }
   });
+  map.setZoom(13);
 }
 
 // alert_markup
