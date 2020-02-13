@@ -254,7 +254,7 @@ function initMap() {
     var directionsDisplay = new google.maps.DirectionsRenderer();
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
+        zoom: 7,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: la_fiesta,
         scrollwheel: false
