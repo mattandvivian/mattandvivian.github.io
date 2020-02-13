@@ -247,18 +247,18 @@ function initMap() {
 
     var la_fiesta = {lat: 44.249472, lng: -76.950173};
 
+    var directionsService = new google.maps.DirectionsService();
+    var directionsRenderer = new google.maps.DirectionsRenderer();
+
     var start = new google.maps.LatLng(44.249472, -76.950173);
     var end = new google.maps.LatLng(44.104587, -77.061417);
 
-    var directionsService = new google.maps.DirectionsService();
-    var directionsDisplay = new google.maps.DirectionsRenderer();
-
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 7,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: la_fiesta,
-        scrollwheel: false
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 7,
+      center: start
     });
+
+    directionsRenderer.setMap(map);
 
     var request = {
       origin: start,
@@ -267,14 +267,10 @@ function initMap() {
     };
 
     directionsService.route(request, function(result, status) {
-      if (status == 'OK') {
-        directionsRenderer.setDirections(result);
-      }
-    });
-
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-    directionsRenderer.setMap(map);
+    if (status == 'OK') {
+      directionsRenderer.setDirections(result);
+    }
+  });
 }
 
 // alert_markup
