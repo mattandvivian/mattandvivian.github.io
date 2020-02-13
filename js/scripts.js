@@ -253,7 +253,7 @@ function initMap() {
     var start = new google.maps.LatLng(44.249472, -76.950173);
     var end = new google.maps.LatLng(44.104587, -77.061417);
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
       zoom: 15,
       center: start
     });
