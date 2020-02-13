@@ -252,9 +252,8 @@ function initMap() {
     var end = new google.maps.LatLng(44.104587, -77.061417);
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-      zoom: 2,
       center: start,
-      mapTypeId: 'roadmap'
+      zoom: 14
     });
 
     directionsRenderer.setMap(map);
