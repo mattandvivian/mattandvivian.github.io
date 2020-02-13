@@ -265,12 +265,12 @@ function initMap() {
 }
 
 function calcRoute() {
-  var start = {lat: 44.249472, lng: -76.950173};
-  var end = {lat: 44.104587, lng: -77.061417};
+  var start = document.getElementById('start').value;
+  var end = document.getElementById('end').value;
 
   var request = {
-    origin: start,
-    destination: end,
+    origin: {lat: 44.249472, lng: -76.950173},
+    destination: {lat: 44.104587, lng: -77.061417},
     travelMode: 'DRIVING'
   };
   directionsService.route(request, function(result, status) {
