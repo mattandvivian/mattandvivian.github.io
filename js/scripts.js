@@ -245,8 +245,6 @@ $(document).ready(function () {
 
 function initMap() {
 
-    var la_fiesta = {lat: 44.249472, lng: -76.950173};
-
     var directionsService = new google.maps.DirectionsService();
     var directionsRenderer = new google.maps.DirectionsRenderer();
 
@@ -254,7 +252,7 @@ function initMap() {
     var end = new google.maps.LatLng(44.104587, -77.061417);
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-      zoom: 15,
+      zoom: 14,
       center: start
     });
 
