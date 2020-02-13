@@ -269,6 +269,7 @@ function initMap() {
       directionsRenderer.setDirections(result);
     }
   });
+  marker.setMap(null);
 }
 
 // alert_markup
