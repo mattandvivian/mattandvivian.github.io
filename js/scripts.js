@@ -260,18 +260,21 @@ function initMap() {
         scrollwheel: false
     });
 
-    directionsRenderer.setMap(map);
-
     var request = {
       origin: start,
       destination: end,
       travelMode: 'DRIVING'
     };
+
     directionsService.route(request, function(result, status) {
       if (status == 'OK') {
         directionsRenderer.setDirections(result);
       }
     });
+
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    directionsRenderer.setMap(map);
 }
 
 // alert_markup
