@@ -253,8 +253,7 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
       zoom: 14,
-      center: start,
-      mapTypeId: google.maps.MapTypeId.HYBRID
+      center: end
     });
 
     directionsRenderer.setMap(map);
