@@ -229,7 +229,7 @@ function initMap() {
     });
 }
 
-function initBBSRMap() {
+/*function initBBSRMap() {
     var la_fiesta = {lat: 44.249472, lng: -76.950173};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
@@ -241,6 +241,43 @@ function initBBSRMap() {
         position: la_fiesta,
         map: map
     });
+}*/
+
+function initBBSRMap() {
+    var la_fiesta = {lat: 44.249472, lng: -76.950173};
+
+    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: la_fiesta,
+        scrollwheel: false
+    });
+
+    directionsRenderer.setMap(map);
+
+    /*var marker = new google.maps.Marker({
+        position: la_fiesta,
+        map: map
+    });*/
+}
+
+function calcRoute() {
+  var start = {lat: 44.249472, lng: -76.950173};
+  var end = {lat: 44.104587, lng: -77.061417};
+
+  var request = {
+    origin: start,
+    destination: end,
+    travelMode: 'DRIVING'
+  };
+  directionsService.route(request, function(result, status) {
+    if (status == 'OK') {
+      directionsRenderer.setDirections(result);
+    }
+  });
 }
 
 // alert_markup
